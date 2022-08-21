@@ -1,5 +1,3 @@
-import Menu from "@mui/icons-material/Menu";
-import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import PersonIcon from "@mui/icons-material/Person";
 import "./navbar.scss";
@@ -20,12 +18,6 @@ const Navbar = () => {
       </nav>
 
       <div className="icons">
-        <div>
-          <Menu />
-        </div>
-        <div>
-          <SearchIcon />
-        </div>
         <div>
           <ShoppingCartIcon />
         </div>

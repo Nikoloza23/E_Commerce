@@ -1,0 +1,35 @@
+@use "../../sass/index.scss" as *;
+
+section {
+  padding: 1rem 9%;
+  .search-form-container {
+    position: fixed;
+    top: 8.5rem;
+    left: 0;
+    right: 0;
+    background: $white;
+  }
+  form {
+    height: 5rem;
+    border-bottom: 0.2rem solid $black;
+    width: 100%;
+    @include flex(center, "");
+
+    input {
+      height: 100%;
+      width: 100%;
+      font-size: 1.7rem;
+      color: $black;
+      text-transform: none;
+      padding-right: 1rem;
+    }
+    label {
+      font-size: 3rem;
+      cursor: pointer;
+      color: $black;
+      &:hover {
+        color: $green;
+      }
+    }
+  }
+}

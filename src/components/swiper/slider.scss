@@ -1,0 +1,8 @@
+@use "../../sass/index.scss" as *;
+
+img {
+  position: relative;
+  object-fit: cover;
+  height: 800px;
+  width: 100%;
+}

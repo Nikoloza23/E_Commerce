@@ -22,6 +22,9 @@
     @include flex(center, space-between);
     padding: 1rem 9%;
 
+    &.scrolled {
+      background-color: $black;
+    }
     .logo {
       font-size: 2.5rem;
       font-weight: bolder;

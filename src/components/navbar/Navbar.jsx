@@ -18,11 +18,11 @@ const Navbar = () => {
       </a>
 
       <nav className="navbar">
-        <a href="">Home</a>
-        <a href="">Men</a>
-        <a href="">Women</a>
-        <a href="">Jewelery</a>
-        <a href="">Electronic</a>
+        <a href="/#">Home</a>
+        <a href="/#">Men</a>
+        <a href="/#">Women</a>
+        <a href="/#">Jewelery</a>
+        <a href="/#">Electronic</a>
       </nav>
 
       <div className="icons">

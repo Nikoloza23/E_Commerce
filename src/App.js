@@ -1,14 +1,12 @@
-import Navbar from "./components/navbar/Navbar";
-import Search from "./components/search/Search";
-import Slider from "./components/swiper/Slider";
+
+import Home from "./pages/Home";
 
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Slider />
-      <Search />
+
+      <Home />
     </div>
   );
 }

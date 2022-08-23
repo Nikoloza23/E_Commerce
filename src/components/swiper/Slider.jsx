@@ -6,7 +6,7 @@ import image4 from "../../assets/img4.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
 
-// Import Swiper styles
+// Import Swiper stylesD
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";

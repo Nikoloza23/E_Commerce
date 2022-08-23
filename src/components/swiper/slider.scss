@@ -1,8 +1,40 @@
 @use "../../sass/index.scss" as *;
 
-img {
+.slider_container {
   position: relative;
-  object-fit: cover;
-  height: 100vh;
-  width: 100%;
+  img {
+    position: relative;
+    object-fit: cover;
+    height: 100vh;
+    width: 100%;
+  }
+  .slider_title {
+    position: relative;
+    font-size: 30px;
+  }
+  h1 {
+    position: absolute;
+    z-index: 999;
+    margin-top: 250px;
+    font-size: 60px;
+    margin-left: 130px;
+    background: white;
+    border-radius: 10px;
+    color: $green;
+    font-family: "Poppins", sans-serif;
+  }
+  .stars {
+    position: absolute;
+    z-index: 999;
+    margin-top: -250px;
+    font-size: 60px;
+    margin-left: 130px;
+
+    color: $green;
+    font-family: "Poppins", sans-serif;
+  }
+
+  img.image{
+    width: 100px;
+  }
 }

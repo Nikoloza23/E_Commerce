@@ -12,6 +12,10 @@
   text-transform: capitalize;
   transition: 0.2s linear;
 
+  img.store_image {
+    width: 50%;
+    border-radius: 100px;
+  }
   .header {
     position: fixed;
     top: 0;
@@ -23,16 +27,15 @@
     padding: 1rem 9%;
     color: black;
 
-    &.scrolled {
-      background-color: black;
-    }
     .logo {
       font-size: 2.5rem;
       font-weight: bolder;
       color: $black;
       i {
         padding-right: 0.5rem;
-        color: $green;
+        color: black;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
       }
     }
   }
@@ -40,9 +43,9 @@
     a {
       font-size: 1.5rem;
       margin: 0 1rem;
-      color: white;
+      color: black;
       &:hover {
-        color: $green;
+        color: darkgray;
         text-decoration: underline;
       }
     }
@@ -58,11 +61,7 @@
       border-radius: 0.5rem;
       margin-left: 0.3rem;
       cursor: pointer;
-      color: white;
-    }
-    &:hover {
-      color: $white;
-      cursor: pointer;
+      color: black;
     }
   }
 }

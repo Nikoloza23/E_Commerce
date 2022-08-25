@@ -11,7 +11,9 @@
   text-decoration: none;
   text-transform: capitalize;
   transition: 0.2s linear;
-
+  &.scrolled {
+    background: white;
+  }
   img.store_image {
     width: 50%;
     border-radius: 100px;

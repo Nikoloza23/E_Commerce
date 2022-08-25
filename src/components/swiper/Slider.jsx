@@ -21,6 +21,7 @@ import "swiper/css/scrollbar";
 import "swiper/css/effect-fade";
 import "./slider.scss";
 
+//Swiper for Featured
 SwiperCore.use([Navigation, EffectFade, EffectCoverflow, Pagination]);
 const Slider = () => {
   return (

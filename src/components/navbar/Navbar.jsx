@@ -19,10 +19,7 @@ const Navbar = () => {
 
       <nav className="navbar">
         <a href="/#">Home</a>
-        <a href="/#">Men</a>
-        <a href="/#">Women</a>
-        <a href="/#">Jewelery</a>
-        <a href="/#">Electronic</a>
+        <a href="/#">Products</a>
       </nav>
 
       <div className="icons">

@@ -1,13 +1,14 @@
 import Navbar from "../components/navbar/Navbar";
 import Slider from "../components/swiper/Slider";
-import Search from "../components/search/Search";
+import ProductsList from "../components/products/ProductsList";
 
+//Home Page
 const Home = () => {
   return (
     <div className="home">
       <Navbar />
       <Slider />
-      <Search />
+      <ProductsList />
     </div>
   );
 };

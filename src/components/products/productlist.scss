@@ -1,20 +1,48 @@
 @use "../../sass/index.scss" as *;
 
 .products_list_container {
-  margin-bottom: 20px;
+  .products_container {
+    width: 100%;
+    min-height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    padding: 10px;
+  }
+  .loader {
+    position: absolute;
+    @include flex(center, center);
+  }
+  img {
+    width: 250px;
+    height: 250px;
+    transition: all 0.3s ease;
+    &:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+  }
+  .card {
+    @include flex(center, center);
+    flex-direction: column;
+    margin: 20px 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+  .card-description {
+    @include flex(flex-start, "");
+    flex-direction: column;
+    padding: 10px;
+  }
 
-  .filter_container {
-    @include flex(center, space-around);
-    margin: 100px 200px;
-    button {
-      color: black;
-      text-decoration: none;
-      font-size: 30px;
-      background: none;
-      &:hover {
-        cursor: pointer;
-        transform: scale(1.1);
-      }
+  .typical {
+    @include flex(center, center);
+    color: black;
+    text-decoration: none;
+    font-size: 40px;
+    background: none;
+    &:hover {
+      cursor: pointer;
     }
   }
 }

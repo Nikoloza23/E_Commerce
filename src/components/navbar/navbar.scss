@@ -11,6 +11,7 @@
   text-decoration: none;
   text-transform: capitalize;
   transition: 0.2s linear;
+
   &.scrolled {
     background: white;
   }
@@ -28,7 +29,6 @@
     @include flex(center, space-between);
     padding: 1rem 9%;
     color: black;
-
     .logo {
       font-size: 2.5rem;
       font-weight: bolder;
@@ -42,9 +42,14 @@
     }
   }
   .navbar {
-    a {
-      font-size: 1.5rem;
-      margin: 0 1rem;
+    div {
+      height: 2.5rem;
+      width: 2.5rem;
+      line-height: 2.5rem;
+      font-size: 3rem;
+      color: $black;
+      border-radius: 0.5rem;
+      cursor: pointer;
       color: black;
       &:hover {
         color: darkgray;

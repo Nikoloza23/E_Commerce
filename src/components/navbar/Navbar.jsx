@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import PersonIcon from "@mui/icons-material/Person";
+import HomeIcon from "@mui/icons-material/Home";
 import "./navbar.scss";
 
 const Navbar = () => {
@@ -18,8 +19,9 @@ const Navbar = () => {
       </a>
 
       <nav className="navbar">
-        <a href="/#">Home</a>
-        <a href="/#">Products</a>
+        <div >
+          <HomeIcon />
+        </div>
       </nav>
 
       <div className="icons">

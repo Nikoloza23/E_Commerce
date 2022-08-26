@@ -2,44 +2,97 @@ import { useEffect, useState } from "react";
 import { SyncLoader } from "react-spinners";
 
 import "./productlist.scss";
-import axios from "axios";
 
 //Limited Product
 const ProductsList = () => {
   const [data, setData] = useState([]);
+  const [filter, setFilter] = useState(data);
+
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    setLoading(true);
-    axios({
-      method: "GET",
-      url: `https://fakestoreapi.com/products?limit=20`,
-    })
-      .then((res) => {
-        console.log(res.data);
-        setData(res.data);
-      })
-      .catch((err) => console.log(err))
-      .finally(() => setLoading(false));
-  }, [setLoading]);
+  let componentMounted = true;
 
+  useEffect(() => {
+    const getProducts = async () => {
+      setLoading(true);
+      const response = await fetch("https://fakestoreapi.com/products");
+      if (componentMounted) {
+        setData(await response.clone().json());
+        setFilter(await response.json());
+        setLoading(false);
+      }
+
+      return () => {
+        componentMounted = false;
+      };
+    };
+    getProducts();
+  }, []);
+
+  const filterProduct = (sneakers) => {
+    const updatedList = data.filter((x) => x.category === sneakers);
+    setFilter(updatedList);
+  };
+
+  const Loading = () => {
+    return (
+      <>
+        <div>{loading && <SyncLoader size={25} />}</div>
+      </>
+    );
+  };
+
+  const ShowProducts = () => {
+    return (
+      <>
+        <div className="filters">
+          <button className="filter" onClick={() => setFilter(data)}>
+            All
+          </button>
+          <button
+            className="filter"
+            onClick={() => filterProduct("men's clothing")}
+          >
+            Men
+          </button>
+          <button
+            className="filter"
+            onClick={() => filterProduct("women's clothing")}
+          >
+            Women
+          </button>
+          <button className="filter" onClick={() => filterProduct("jewelery")}>
+            Jewelery
+          </button>
+          <button
+            className="filter"
+            onClick={() => filterProduct("electronics")}
+          >
+            Electronic
+          </button>
+        </div>
+        {filter.map((product) => {
+          return (
+            <div className="products_list_container">
+              <div key={product.id} className="card">
+                <div>
+                  <img src={product.image} alt={product.title} />
+                </div>
+                <div className="card-description">
+                  <h6>{product.title}</h6>
+                  <h6 className="price">{`Price: ${product.price}$`}</h6>
+                  <div className="buy">Buy Now</div>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </>
+    );
+  };
   return (
-    <div className="products_list_container">
-      <div className="typical">Trending Sneakers</div>
-      <div className="products_container">
-        <div className="loader">{loading && <SyncLoader size={25} />}</div>
-        {data.map((product) => (
-          <div key={product.id} className="card">
-            <div>
-              <img src={product.image} alt="" />
-            </div>
-            <div className="card-description">
-              <h6>{product.title}</h6>
-              <h6 className="price">{`Price: ${product.price}$`}</h6>
-            </div>
-          </div>
-        ))}
-      </div>
+    <div className="set_products">
+      {loading ? <Loading /> : <ShowProducts />}
     </div>
   );
 };

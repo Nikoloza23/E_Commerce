@@ -1,15 +1,12 @@
 import { useEffect, useState } from "react";
 import { SyncLoader } from "react-spinners";
-
 import "./productlist.scss";
 
 //Limited Product
-const ProductsList = () => {
+const ProductsList = ({ product }) => {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState(data);
-
   const [loading, setLoading] = useState(false);
-
   let componentMounted = true;
 
   useEffect(() => {
@@ -79,7 +76,7 @@ const ProductsList = () => {
                   <img src={product.image} alt={product.title} />
                 </div>
                 <div className="card-description">
-                  <h6>{product.title}</h6>
+                  <h6>{product.title.substring(0, 20)}</h6>
                   <h6 className="price">{`Price: ${product.price}$`}</h6>
                   <div className="buy">Buy Now</div>
                 </div>

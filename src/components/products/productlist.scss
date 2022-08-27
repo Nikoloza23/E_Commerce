@@ -1,22 +1,5 @@
 @use "../../sass/index.scss" as *;
 
-.products_list_container {
-  .loader {
-    position: absolute;
-    @include flex(center, center);
-  }
-  img {
-    width: 100%;
-    height: 150px;
-    transition: all 0.3s ease;
-    background: none;
-    &:hover {
-      transform: scale(1.1);
-      cursor: pointer;
-    }
-  }
-}
-
 .set_products {
   width: 100%;
   min-height: 80vh;
@@ -25,36 +8,49 @@
   justify-items: center;
   padding: 10px;
   position: absolute;
+
+  .loader {
+    position: absolute;
+    @include flex(center, center);
+  }
+
+  img {
+    width: 100%;
+    height: 150px;
+    background: none;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
   .card {
     @include flex(center, center);
     flex-direction: column;
     margin: 20px 20px;
     border: 1px solid #ccc;
     width: 90%;
-    height: 70vh;
+    height: 50vh;
     padding: 20px;
-  }
-  .card-description {
-    flex-direction: column;
-    padding: 10px;
-    overflow: hidden;
-    h6 {
-      color: black;
-      font-size: 15px;
-      margin-bottom: 10px;
-    }
-    .price {
-      font-size: 20px;
-    }
-    .buy {
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      display: flex;
-      align-content: center;
-      &:hover {
-        transform: scale(1.1);
-        color: gray;
+
+    .card-description {
+      @include flex(center, center);
+      flex-direction: column;
+      padding: 10px;
+      overflow: hidden;
+      h6 {
+        color: black;
+        font-size: 15px;
+        margin-bottom: 10px;
+      }
+      .price {
+        font-size: 20px;
+      }
+      .buy {
+        border: 1px solid #ccc;
+        border-radius: 10px;
         cursor: pointer;
+        &:hover {
+          transform: scale(1.1);
+        }
       }
     }
   }

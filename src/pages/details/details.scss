@@ -1,0 +1,85 @@
+@use "../../sass/index.scss" as *;
+
+.details_left {
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+
+  img {
+    width: 400px;
+    height: 400px;
+    margin-top: 150px;
+    background: none;
+    margin-left: 200px;
+    cursor: pointer;
+  }
+}
+
+.details_right {
+  width: 600px;
+  position: absolute;
+  right: 50px;
+  margin-top: 120px;
+
+  @include flex("", "");
+  flex-direction: column;
+  h4 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.5);
+    --bs-text-opacity: 1;
+  }
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bolder;
+  }
+  p {
+    font-size: 1.25rem;
+    font-weight: bolder;
+  }
+  .star {
+    color: yellow;
+    font-size: 1.5rem;
+    margin-left: 5px;
+  }
+  h3 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  button {
+    @include flex("", "");
+    background: none;
+    color: $dark;
+    font-weight: bolder;
+    border-radius: 10px;
+    width: max-content;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  a {
+    padding-left: 10rem;
+    margin-top: -35px;
+    padding-bottom: 0.5rem;
+    font-size: 1rem;
+    color: gray;
+    font-weight: bolder;
+    cursor: pointer;
+    width: 500px;
+
+    &:hover {
+      transform: scale(1.1);
+      color: greenyellow;
+    }
+  }
+}

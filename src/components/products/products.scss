@@ -20,7 +20,7 @@
     background: none;
     cursor: pointer;
     &:hover {
-      transform: scale(1.1);
+      transform: $transform;
     }
   }
   .card {
@@ -48,8 +48,10 @@
       .buy {
         border-radius: 10px;
         cursor: pointer;
+        text-decoration: none;
+        color: gray;
         &:hover {
-          transform: scale(1.1);
+          transform: $transform;
         }
       }
     }
@@ -65,7 +67,7 @@
       cursor: pointer;
       &:hover {
         color: gray;
-        transform: scale(1.1);
+        transform: $transform;
       }
     }
   }

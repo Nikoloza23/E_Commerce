@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import { Link } from "react-router-dom";
+
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import PersonIcon from "@mui/icons-material/Person";
 import HomeIcon from "@mui/icons-material/Home";
@@ -19,13 +21,13 @@ const Navbar = () => {
       <a href="/#" className="logo">
         <i>N'store</i>
       </a>
-
-      <nav className="navbar">
-        <div>
-          <HomeIcon />
-        </div>
-      </nav>
-
+      <Link to="/">
+        <nav className="navbar">
+          <div>
+            <HomeIcon />
+          </div>
+        </nav>
+      </Link>
       <div className="icons">
         <div>
           <ShoppingCartIcon />

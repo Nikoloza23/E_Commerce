@@ -21,7 +21,7 @@ const Footer = () => {
             </a>
           </li>
           <li>
-            <a href="/https://www.linkedin.com/in/nikoloz-abashia-536681222/">
+            <a href="https://www.linkedin.com/in/nikoloz-abashia-536681222/">
               <LinkedInIcon />
             </a>
           </li>

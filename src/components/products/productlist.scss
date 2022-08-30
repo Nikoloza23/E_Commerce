@@ -1,7 +1,7 @@
 @use "../../sass/index.scss" as *;
 
 .set_products {
-  width: 100%;
+  width: $max-content;
   min-height: 80vh;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -15,9 +15,10 @@
   }
 
   img {
-    width: 100%;
+    width: $max-content;
     height: 150px;
     background: none;
+    cursor: pointer;
     &:hover {
       transform: scale(1.1);
     }
@@ -26,7 +27,7 @@
     @include flex(center, center);
     flex-direction: column;
     margin: 20px 20px;
-    border: 1px solid #ccc;
+
     width: 90%;
     height: 50vh;
     padding: 20px;
@@ -37,7 +38,7 @@
       padding: 10px;
       overflow: hidden;
       h6 {
-        color: black;
+        color: $dark;
         font-size: 15px;
         margin-bottom: 10px;
       }
@@ -45,7 +46,6 @@
         font-size: 20px;
       }
       .buy {
-        border: 1px solid #ccc;
         border-radius: 10px;
         cursor: pointer;
         &:hover {
@@ -57,7 +57,7 @@
   .filters {
     position: absolute;
     @include flex(center, center);
-    margin-top: -50px;
+    margin-top: -60px;
     .filter {
       margin: 20px;
       background: none;

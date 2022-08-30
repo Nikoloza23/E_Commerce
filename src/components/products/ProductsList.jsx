@@ -2,14 +2,14 @@ import { useEffect, useState } from "react";
 import { SyncLoader } from "react-spinners";
 import "./productlist.scss";
 
-//Limited Product
-const ProductsList = ({ product }) => {
+//Products With Filter
+const ProductsList = () => {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState(data);
   const [loading, setLoading] = useState(false);
-  let componentMounted = true;
 
   useEffect(() => {
+    let componentMounted = true;
     const getProducts = async () => {
       setLoading(true);
       const response = await fetch("https://fakestoreapi.com/products");

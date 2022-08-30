@@ -1,0 +1,72 @@
+@use "../../sass/index.scss" as *;
+
+footer {
+  position: absolute;
+  margin-top: 105%;
+  background: #111;
+  height: auto;
+  width: 100%;
+  font-family: "Open Sans";
+  padding-top: 20px;
+  color: $white;
+  .footer-content {
+    @include flex(center, center);
+    flex-direction: column;
+    text-align: center;
+
+    h3 {
+      font-size: 1.8rem;
+      font-weight: 400;
+      text-transform: capitalize;
+      line-height: 3rem;
+    }
+    p {
+      max-width: 500px;
+      margin: 10px auto;
+      line-height: 28px;
+      font-size: 14px;
+    }
+  }
+  .socials {
+    list-style: none;
+    @include flex(center, center);
+    margin: 1rem 0 1rem 0;
+
+    li {
+      margin: 0 10px;
+    }
+    i {
+      font-size: 1.1rem;
+      transition: color 0.4s ease;
+      &:hover {
+        color: aqua;
+      }
+    }
+    a {
+      text-decoration: none;
+      color: $white;
+      font-size: 1.1rem;
+      transition: color 0.4s ease;
+
+      &:hover {
+        color: aqua;
+      }
+    }
+  }
+  .footer-bottom {
+    background: #000;
+    width: $max-content;
+    padding: 20px 0;
+    text-align: center;
+    p {
+      font-size: 14px;
+      word-spacing: 2px;
+      text-transform: capitalize;
+    }
+    span {
+      text-transform: uppercase;
+      opacity: 0.4;
+      font-weight: 200;
+    }
+  }
+}

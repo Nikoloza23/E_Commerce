@@ -3,10 +3,3 @@
   align-items: $align-item;
   justify-content: $justify-content;
 }
-
-
-@mixin grid($val) {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
-  gap: 1.5rem;
-}

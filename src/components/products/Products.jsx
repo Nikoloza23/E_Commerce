@@ -71,7 +71,7 @@ const ProductsList = () => {
         </div>
         {filter.map((product) => {
           return (
-            <div className="products_list_container">
+            <div className="products_list_container" key={product.id}>
               <div key={product.id} className="card">
                 <div>
                   <img src={product.image} alt={product.title} />

@@ -38,7 +38,7 @@ function Details(type) {
       setLoading(false);
     };
     getProductDetails();
-  }, []);
+  }, [id]);
 
   function openModal() {
     setIsOpen(true);

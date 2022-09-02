@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { SyncLoader } from "react-spinners";
+import Footer from "../footer/Footer";
 import "./products.scss";
 
 //Products With Filter
@@ -79,9 +80,7 @@ const ProductsList = () => {
                 <div className="card-description">
                   <h6>{product.title.substring(0, 20)}</h6>
                   <h6 className="price">{`Price: ${product.price}$`}</h6>
-                  <NavLink
-                    to={`/products/${product.id}`}
-                  >
+                  <NavLink to={`/products/${product.id}`}>
                     <div className="buy">Buy Now</div>
                   </NavLink>
                 </div>

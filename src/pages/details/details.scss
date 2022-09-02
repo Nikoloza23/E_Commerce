@@ -1,80 +1,81 @@
 @use "../../sass/index.scss" as *;
 
-.details_left {
-  height: 100%;
-  width: 50%;
-  position: absolute;
-  top: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
-
-  img {
-    width: 400px;
-    height: 400px;
-    margin-top: 150px;
-
-    margin-left: 200px;
-    cursor: pointer;
-  }
-}
-
-.details_right {
-  width: 600px;
-  position: absolute;
-  right: 50px;
+.details {
   margin-top: 120px;
+  .details_left {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+    img {
+      width: 400px;
+      height: 400px;
+      margin-top: 150px;
 
-  @include flex("", "");
-  flex-direction: column;
-  h4 {
-    font-size: 2rem;
-    text-transform: uppercase;
-    color: rgba(0, 0, 0, 0.5);
-    --bs-text-opacity: 1;
-  }
-  h1 {
-    font-size: 2.5rem;
-    font-weight: bolder;
-  }
-  p {
-    font-size: 1.25rem;
-    font-weight: bolder;
-  }
-  .star {
-    color: yellow;
-    font-size: 1.5rem;
-    margin-left: 5px;
-  }
-  h3 {
-    font-weight: 700;
-    font-size: 2.5rem;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-  .sides {
-    button {
-      background: none;
-      color: $dark;
-      font-weight: bolder;
-      margin: 30px 0px 10px;
-      font-size: 1rem;
+      margin-left: 200px;
       cursor: pointer;
-
-      &:hover {
-        transform: scale(1.1);
-      }
     }
-    a {
-      position: absolute;
-      background: none;
-      color: $dark;
+  }
+
+  .details_right {
+    width: 600px;
+    position: absolute;
+    right: 50px;
+
+    @include flex("", "");
+    flex-direction: column;
+    h4 {
+      font-size: 2rem;
+      text-transform: uppercase;
+      color: rgba(0, 0, 0, 0.5);
+      --bs-text-opacity: 1;
+    }
+    h1 {
+      font-size: 2.5rem;
       font-weight: bolder;
-      margin: 30px 20px 10px;
-      font-size: 1rem;
-      cursor: pointer;
-      &:hover {
-        transform: scale(1.1);
-        color: green;
+    }
+    p {
+      font-size: 1.25rem;
+      font-weight: bolder;
+    }
+    .star {
+      color: yellow;
+      font-size: 1.5rem;
+      margin-left: 5px;
+    }
+    h3 {
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .sides {
+      button {
+        background: none;
+        color: $dark;
+        font-weight: bolder;
+        margin: 30px 0px 10px;
+        font-size: 1rem;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+      a {
+        position: absolute;
+        background: none;
+        color: $dark;
+        font-weight: bolder;
+        margin: 30px 20px 10px;
+        font-size: 1rem;
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.1);
+          color: green;
+        }
       }
     }
   }

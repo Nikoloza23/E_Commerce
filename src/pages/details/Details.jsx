@@ -58,7 +58,7 @@ function Details(type) {
 
   const SelectedProduct = () => {
     return (
-      <>
+      <div>
         <div className="details_left">
           <img onClick={openModal} src={product.image} alt="" />
           <Modal
@@ -89,15 +89,13 @@ function Details(type) {
             <NavLink to="/">Go to Cart</NavLink>
           </div>
         </div>
-      </>
+        <Footer type="list" />;
+      </div>
     );
   };
 
   return (
-    <div className="details">
-      <Footer type="list" />
-      {loading ? <Loading /> : <SelectedProduct />}
-    </div>
+    <div className="details">{loading ? <Loading /> : <SelectedProduct />}</div>
   );
 }
 

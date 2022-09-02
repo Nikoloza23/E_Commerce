@@ -5,7 +5,7 @@ import "./footer.scss";
 //Footer
 const Footer = ({ type }) => {
   return (
-    <footer className={type === "list" ? "footer mini_footer" : "footer"}>
+    <footer className={type === "list" ? " mini_footer" : "footer"}>
       <div className="footer-content">
         <h3>N'Store</h3>
         <p>

@@ -18,9 +18,9 @@ const Navbar = () => {
   };
   return (
     <header className={isScrolled ? "header scrolled" : "header"}>
-      <a href="/#" className="logo">
+      <div className="logo">
         <i>N'store</i>
-      </a>
+      </div>
       <Link to="/">
         <nav className="navbar">
           <div>

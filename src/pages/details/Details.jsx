@@ -5,7 +5,6 @@ import { NavLink } from "react-router-dom";
 import { Star } from "@mui/icons-material";
 import { SyncLoader } from "react-spinners";
 
-import ReactDOM from "react-dom";
 import Modal from "react-modal";
 
 import "./details.scss";
@@ -24,7 +23,7 @@ const customStyles = {
 };
 Modal.setAppElement("#root");
 //Product Details
-const Details = () => {
+function Details(type) {
   const { id } = useParams();
 
   const [modalIsOpen, setIsOpen] = useState(false);
@@ -85,21 +84,21 @@ const Details = () => {
           <p className="descriprion">
             {product.description?.substring(0, 100)}
           </p>
-          <button>Add to Cart</button>
-          <NavLink to="/">Go to Cart</NavLink>
+          <div className="sides">
+            <button>Add to Cart</button>
+            <NavLink to="/">Go to Cart</NavLink>
+          </div>
         </div>
       </>
     );
   };
 
   return (
-    <>
-      <div className="details">
-        {loading ? <Loading /> : <SelectedProduct />}
-        <Footer />;
-      </div>
-    </>
+    <div className="details">
+      <Footer type="list" />
+      {loading ? <Loading /> : <SelectedProduct />}
+    </div>
   );
-};
+}
 
 export default Details;

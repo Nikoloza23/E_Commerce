@@ -3,9 +3,9 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import "./footer.scss";
 
 //Footer
-const Footer = () => {
+const Footer = ({ type }) => {
   return (
-    <footer>
+    <footer className={type === "list" ? "footer mini_footer" : "footer"}>
       <div className="footer-content">
         <h3>N'Store</h3>
         <p>

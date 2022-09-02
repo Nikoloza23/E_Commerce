@@ -51,34 +51,31 @@
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
   }
-  button {
-    @include flex("", "");
-    background: none;
-    color: $dark;
-    font-weight: bolder;
-    border-radius: 10px;
-    width: max-content;
-    padding: 10px;
-    margin-top: 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
-  a {
-    padding-left: 10rem;
-    margin-top: -35px;
-    padding-bottom: 0.5rem;
-    font-size: 1rem;
-    color: gray;
-    font-weight: bolder;
-    cursor: pointer;
-    width: 500px;
+  .sides {
+    button {
+      background: none;
+      color: $dark;
+      font-weight: bolder;
+      margin: 30px 0px 10px;
+      font-size: 1rem;
+      cursor: pointer;
 
-    &:hover {
-      transform: scale(1.1);
-      color: greenyellow;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    a {
+      position: absolute;
+      background: none;
+      color: $dark;
+      font-weight: bolder;
+      margin: 30px 20px 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.1);
+        color: green;
+      }
     }
   }
 }
@@ -87,6 +84,7 @@
   width: 300px;
   height: 300px;
   cursor: pointer;
+  pointer-events: none;
   &:hover {
     transform: scale(1.1);
   }
@@ -99,4 +97,5 @@
   cursor: pointer;
   font-weight: bolder;
   overflow: hidden;
+  pointer-events: none;
 }

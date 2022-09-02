@@ -9,6 +9,7 @@ footer {
   font-family: "Open Sans";
   padding-top: 20px;
   color: $white;
+
   .footer-content {
     @include flex(center, center);
     flex-direction: column;
@@ -69,4 +70,15 @@ footer {
       font-weight: 200;
     }
   }
+}
+
+.mini_footer {
+  position: absolute;
+  margin-top: 50%;
+  background: #111;
+  height: auto;
+  width: 100%;
+  font-family: "Open Sans";
+  padding-top: 20px;
+  color: $white;
 }

@@ -1,0 +1,51 @@
+@use "../../sass/index.scss" as *;
+
+.cart {
+  margin-top: 130px;
+  margin-left: 150px;
+
+  .cart_container {
+    hr {
+      border: 1px solid black;
+      width: 80%;
+    }
+    button {
+      font-size: 20px;
+      background: none;
+      cursor: pointer;
+      position: absolute;
+      margin-top: 10px;
+
+      &:hover {
+        transform: scale(1.1);
+        color: gray;
+      }
+    }
+
+    img {
+      width: 200px;
+      height: 200px;
+      margin: 40px 10px 50px;
+      cursor: pointer;
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+      h1 {
+        position: absolute;
+        left: 500px;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+.empty_image {
+  @include flex(center, center);
+  img {
+    height: 100vh;
+    margin: -100px;
+    width: 600px;
+    background-image: none;
+  }
+}

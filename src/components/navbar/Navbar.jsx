@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
 
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import PersonIcon from "@mui/icons-material/Person";
@@ -12,10 +13,13 @@ import "./navbar.scss";
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
+  const state = useSelector((state) => state.handleCart);
+
   window.onscroll = () => {
     setIsScrolled(window.pageYOffset === 0 ? false : true);
     return () => (window.onscroll = null);
   };
+
   return (
     <header className={isScrolled ? "header scrolled" : "header"}>
       <div className="logo">
@@ -30,7 +34,10 @@ const Navbar = () => {
       </Link>
       <div className="icons">
         <div>
-          <ShoppingCartIcon />
+          <div className="length">{state.length ? state.length : ""}</div>
+          <Link to="/cart" style={{color: "black"}}>
+            <ShoppingCartIcon />
+          </Link>
         </div>
         <div>
           <PersonIcon />

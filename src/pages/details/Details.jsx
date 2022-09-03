@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import { NavLink } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addCart } from "../../redux/action/index";
 
 import { Star } from "@mui/icons-material";
 import { SyncLoader } from "react-spinners";
@@ -29,6 +31,12 @@ function Details(type) {
   const [modalIsOpen, setIsOpen] = useState(false);
   const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(false);
+
+  const dispatch = useDispatch();
+  const addProduct = (product) => {
+    dispatch(addCart(product));
+    console.log(product);
+  };
 
   useEffect(() => {
     const getProductDetails = async () => {
@@ -85,8 +93,9 @@ function Details(type) {
             {product.description?.substring(0, 100)}
           </p>
           <div className="sides">
-            <button>Add to Cart</button>
-            <NavLink to="/">Go to Cart</NavLink>
+            <button onClick={() => addProduct(product)}>Add to Cart</button>
+
+            <NavLink to="/cart">Go to Cart</NavLink>
           </div>
         </div>
         <Footer type="list" />;

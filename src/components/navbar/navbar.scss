@@ -49,6 +49,13 @@
   }
   .icons {
     @include flex("", "");
+    .length {
+      position: absolute;
+      font-size: 1rem;
+      top: 10px;
+      margin-left: 16px;
+      font-weight: bolder;
+    }
     div {
       height: 2.5rem;
       width: 2.5rem;

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { SyncLoader } from "react-spinners";
-import Footer from "../footer/Footer";
 import "./products.scss";
 
 //Products With Filter

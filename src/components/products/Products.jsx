@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import { SyncLoader } from "react-spinners";
+
+import Loader from "../loader/Loader";
+
 import "./products.scss";
 
 //Products With Filter
@@ -35,7 +37,7 @@ const ProductsList = () => {
   const Loading = () => {
     return (
       <>
-        <div>{loading && <SyncLoader size={25} />}</div>
+        <div>{loading && <Loader />}</div>
       </>
     );
   };

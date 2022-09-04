@@ -5,19 +5,18 @@ import { useDispatch } from "react-redux";
 import { addCart } from "../../redux/action/index";
 
 import { Star } from "@mui/icons-material";
-import { SyncLoader } from "react-spinners";
 
 import Modal from "react-modal";
 
 import "./details.scss";
 import Footer from "../../components/footer/Footer";
+import Loader from "../../components/loader/Loader";
 
 const customStyles = {
   content: {
     top: "50%",
     left: "50%",
     right: "auto",
-
     bottom: "auto",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
@@ -59,7 +58,7 @@ function Details(type) {
   const Loading = () => {
     return (
       <>
-        <div>{loading && <SyncLoader size={25} />}</div>
+        <div>{loading && <Loader />}</div>
       </>
     );
   };

@@ -3,6 +3,7 @@ import { delCart } from "../../redux/action/index";
 
 import "./cart.scss";
 
+//Cart
 const Cart = () => {
   const state = useSelector((state) => state.handleCart);
 
@@ -17,6 +18,9 @@ const Cart = () => {
       <div className="cart_container" key={product.id}>
         <button onClick={() => handleClose(product)}>X</button>
         <img src={product.image} alt="" />
+        <h1>{product.title}</h1>
+        <div className="product_price">{product.price}$</div>
+        <div className="checkout">Check Order</div>
         <hr />
       </div>
     );

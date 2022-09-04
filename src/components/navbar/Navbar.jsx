@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
 
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import PersonIcon from "@mui/icons-material/Person";
@@ -35,7 +35,7 @@ const Navbar = () => {
       <div className="icons">
         <div>
           <div className="length">{state.length ? state.length : ""}</div>
-          <Link to="/cart" style={{color: "black"}}>
+          <Link to="/cart" style={{ color: "black" }}>
             <ShoppingCartIcon />
           </Link>
         </div>

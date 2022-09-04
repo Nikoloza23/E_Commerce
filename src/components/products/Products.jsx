@@ -74,18 +74,18 @@ const ProductsList = () => {
         {filter.map((product) => {
           return (
             <div className="products_list_container" key={product.id}>
-              <div key={product.id} className="card">
-                <div>
-                  <img src={product.image} alt={product.title} />
-                </div>
-                <div className="card-description">
-                  <h6>{product.title.substring(0, 20)}</h6>
-                  <h6 className="price">{`Price: ${product.price}$`}</h6>
-                  <NavLink to={`/products/${product.id}`}>
+              <NavLink to={`/products/${product.id}`}>
+                <div key={product.id} className="card">
+                  <div>
+                    <img src={product.image} alt={product.title} />
+                  </div>
+                  <div className="card-description">
+                    <h6>{product.title.substring(0, 20)}</h6>
+                    <h6 className="price">{`Price: ${product.price}$`}</h6>
                     <div className="buy">Buy Now</div>
-                  </NavLink>
+                  </div>
                 </div>
-              </div>
+              </NavLink>
             </div>
           );
         })}

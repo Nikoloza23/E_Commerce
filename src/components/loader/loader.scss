@@ -7,12 +7,12 @@
   margin-top: 10%;
   margin-left: 50%;
   transform: translate(-50%, -50%);
-  position: absolute;
+  position: $abs;
 
   .ball {
     width: 20px;
     height: 20px;
-    position: absolute;
+    position: $abs;
     border-radius: 50%;
     left: 15%;
     animation: ball 0.5s alternate infinite ease;
@@ -23,7 +23,7 @@
     height: 4px;
     border-radius: 50%;
     background-color: #ffffff59;
-    position: absolute;
+    position: $abs;
     top: 62px;
     z-index: -1;
     left: 15%;

@@ -1,11 +1,11 @@
 @use "../../sass/index.scss" as *;
 
 footer {
-  position: absolute;
+  position: $abs;
   margin-top: 110%;
   background: #111;
   height: auto;
-  width: 100%;
+  width: $max-content;
   font-family: "Open Sans";
   padding-top: 20px;
   color: $white;
@@ -73,11 +73,11 @@ footer {
 }
 
 .mini_footer {
-  position: absolute;
+  position: $abs;
   top: -130%;
   background: #111;
   height: auto;
-  width: 100%;
+  width: $max-content;
   font-family: "Open Sans";
   padding-top: 20px;
   color: $white;

@@ -7,49 +7,70 @@
     margin-bottom: 30px;
     hr {
       border: 1px solid black;
-      width: 80%;
+      width: 95%;
     }
     button {
       font-size: 20px;
       background: none;
-      cursor: pointer;
-      position: absolute;
+      cursor: $curs;
+      position: $abs;
       margin-top: 10px;
-
       &:hover {
         transform: scale(1.1);
-        color: gray;
       }
     }
 
     h1 {
-      position: absolute;
+      position: $abs;
       margin-top: -280px;
       font-size: 1.5rem;
-      font-weight: bolder;
+      font-weight: $font;
       left: 400px;
     }
     img {
       width: 200px;
       height: 200px;
       margin: 40px 10px 50px;
-      cursor: pointer;
+      cursor: $curs;
     }
     .product_price {
-      position: absolute;
+      position: $abs;
       margin-top: -200px;
       font-size: 1.5rem;
-      font-weight: bolder;
+      font-weight: $font;
       left: 400px;
     }
-    .checkout {
-      position: absolute;
-      margin-top: -110px;
-      cursor: pointer;
+    .increment {
+      position: $abs;
+      margin-top: 230px;
+      cursor: $curs;
       font-size: 1.5rem;
-      font-weight: bolder;
+      font-weight: $font;
       left: 400px;
-      border: 1px solid aqua;
+      border-radius: 10px;
+      &:hover {
+        color: green;
+      }
+    }
+    .decrement {
+      position: $abs;
+      margin-top: 230px;
+      cursor: $curs;
+      font-size: 1.5rem;
+      font-weight: $font;
+      left: 450px;
+      border-radius: 10px;
+      &:hover {
+        color: red;
+      }
+    }
+    .quantity {
+      position: $abs;
+      margin-top: -130px;
+      cursor: $curs;
+      font-size: 1.5rem;
+      font-weight: $font;
+      left: 400px;
       border-radius: 10px;
     }
   }

@@ -7,10 +7,10 @@
   grid-template-columns: repeat(5, 1fr);
   justify-items: center;
   padding: 10px;
-  position: absolute;
+  position: $abs;
 
   .loader {
-    position: absolute;
+    position: $abs;
     @include flex(center, center);
   }
 
@@ -18,7 +18,7 @@
     width: $max-content;
     height: 150px;
     background: none;
-    cursor: pointer;
+    cursor: $curs;
     &:hover {
       transform: $transform;
     }
@@ -47,7 +47,7 @@
       }
       .buy {
         border-radius: 10px;
-        cursor: pointer;
+        cursor: $curs;
         text-decoration: none;
         color: gray;
         &:hover {
@@ -58,14 +58,14 @@
     }
   }
   .filters {
-    position: absolute;
+    position: $abs;
     @include flex(center, center);
     margin-top: -60px;
     .filter {
       margin: 20px;
       background: none;
       font-size: 20px;
-      cursor: pointer;
+      cursor: $curs;
       &:hover {
         color: gray;
         transform: $transform;

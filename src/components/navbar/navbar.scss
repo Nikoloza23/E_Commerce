@@ -21,7 +21,7 @@
     color: $dark;
     .logo {
       font-size: 2.5rem;
-      font-weight: bolder;
+      font-weight: $font;
       color: $dark;
       i {
         padding-right: 0.5rem;
@@ -50,11 +50,11 @@
   .icons {
     @include flex("", "");
     .length {
-      position: absolute;
+      position: $abs;
       font-size: 1rem;
       top: 10px;
       margin-left: 16px;
-      font-weight: bolder;
+      font-weight: $font$font$font;
     }
     div {
       height: 2.5rem;

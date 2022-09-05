@@ -3,27 +3,48 @@
 .details {
   margin-top: 120px;
   .details_left {
-    height: 100%;
+    height: $max-content;
     width: 50%;
-    position: absolute;
+    position: $abs;
     top: 0;
     overflow-x: hidden;
     padding-top: 20px;
     img {
       width: 400px;
       height: 400px;
-      margin-top: 150px;
+      margin-top: 170px;
 
       margin-left: 200px;
-      cursor: pointer;
+      cursor: $curs;
     }
   }
 
   .details_right {
     width: 600px;
-    position: absolute;
+    position: $abs;
     right: 50px;
-
+    .quantity {
+      .increment {
+        background: none;
+        cursor: pointer;
+        font-size: 2rem;
+        font-weight: $font;
+        &:hover {
+          color: green;
+        }
+      }
+      .decrement {
+        background: none;
+        font-size: 2rem;
+        cursor: pointer;
+        position: $abs;
+        left: 50px;
+        font-weight: $font;
+        &:hover {
+          color: red;
+        }
+      }
+    }
     @include flex("", "");
     flex-direction: column;
     h4 {
@@ -34,11 +55,11 @@
     }
     h1 {
       font-size: 2.5rem;
-      font-weight: bolder;
+      font-weight: $font;
     }
     p {
       font-size: 1.25rem;
-      font-weight: bolder;
+      font-weight: $font;
     }
     .star {
       color: yellow;
@@ -52,26 +73,26 @@
       margin-bottom: 1.5rem;
     }
     .sides {
-      button {
+      .add_cart {
         background: none;
         color: $dark;
-        font-weight: bolder;
+        font-weight: $font;
         margin: 30px 0px 10px;
         font-size: 1rem;
-        cursor: pointer;
+        cursor: $curs;
 
         &:hover {
           transform: scale(1.1);
         }
       }
       a {
-        position: absolute;
+        position: $abs;
         background: none;
         color: $dark;
-        font-weight: bolder;
+        font-weight: $font;
         margin: 30px 20px 10px;
         font-size: 1rem;
-        cursor: pointer;
+        cursor: $curs;
         &:hover {
           transform: scale(1.1);
           color: green;
@@ -84,7 +105,7 @@
 .modal_image {
   width: 300px;
   height: 300px;
-  cursor: pointer;
+  cursor: $curs;
   margin-top: 30px;
   pointer-events: none;
   &:hover {
@@ -94,8 +115,8 @@
 
 .modal_close {
   background: none;
-  position: absolute;
-  cursor: pointer;
-  font-weight: bolder;
+  position: $abs;
+  cursor: $curs;
+  font-weight: $font;
   overflow: hidden;
 }

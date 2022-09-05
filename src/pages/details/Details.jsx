@@ -30,11 +30,25 @@ function Details(type) {
   const [modalIsOpen, setIsOpen] = useState(false);
   const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [quantity, setQuantity] = useState(1);
 
   const dispatch = useDispatch();
-  const addProduct = (product) => {
-    dispatch(addCart(product));
-    console.log(product);
+
+  const addProduct = (product, quantity) => {
+    dispatch(addCart(product, quantity));
+    console.log(quantity);
+  };
+
+  const handleDecrement = () => {
+    if (quantity >= 1) {
+      setQuantity((prevCount) => prevCount - 1);
+    }
+  };
+
+  const handleIncrement = () => {
+    if (quantity < 10) {
+      setQuantity((prevCount) => prevCount + 1);
+    }
   };
 
   useEffect(() => {
@@ -87,12 +101,32 @@ function Details(type) {
             Rating {product.rating && product.rating.rate}
             <Star className="star" />
           </p>
-          <h3>{product.price}$</h3>
+          <h3>Total Price: {product.price * quantity}$</h3>
+          <h2 style={{ color: "gray" }}>Total Product: {quantity}</h2>
+          <div className="quantity">
+            <button
+              className="increment"
+              onClick={() => handleIncrement(product.id)}
+            >
+              +
+            </button>
+            <button
+              onClick={() => handleDecrement(product.id)}
+              className="decrement"
+            >
+              -
+            </button>
+          </div>
           <p className="descriprion">
             {product.description?.substring(0, 100)}
           </p>
           <div className="sides">
-            <button onClick={() => addProduct(product)}>Add to Cart</button>
+            <button
+              onClick={() => addProduct(product, quantity)}
+              className="add_cart"
+            >
+              Add to Cart
+            </button>
 
             <NavLink to="/cart">Go to Cart</NavLink>
           </div>

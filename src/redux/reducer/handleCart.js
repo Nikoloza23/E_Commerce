@@ -14,8 +14,8 @@ const handleCart = (state = cart, action) => {
                 return [
                     ...state,
                     {
-                        ...product,
-                        qty: 1,
+                        ...product.basic,
+                        qty: product.qty,
                     }
                 ]
             }

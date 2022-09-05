@@ -34,9 +34,8 @@ function Details(type) {
 
   const dispatch = useDispatch();
 
-  const addProduct = (product, quantity) => {
-    dispatch(addCart(product, quantity));
-    console.log(quantity);
+  const addProduct = (product) => {
+    dispatch(addCart({basic:product, qty:quantity}));
   };
 
   const handleDecrement = () => {

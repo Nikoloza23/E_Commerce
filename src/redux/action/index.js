@@ -1,16 +1,15 @@
 //For Add Item in Cart
 export const addCart = (product) => {
-    console.log(product);
     return {
         type: "ADDITEM",
         payload: product
     }
 }
 
-export const delCart = (product) =>{
+export const delCart = (id) =>{
     return{
         type:"DELITEM",
-        payload: product
+        payload: id
     }
 }
 

@@ -9,15 +9,15 @@ const Cart = () => {
 
   const dispatch = useDispatch();
 
-  const handleClose = (item) => {
-    dispatch(delCart(item));
-    console.log(item);
+  const handleClose = (id) => {
+    dispatch(delCart(id));
+    console.log(id);
   };
 
   const product = (product) => {
     return (
       <div className="cart_container" key={product.id}>
-        <button onClick={() => handleClose(product)}>X</button>
+        <button onClick={() => handleClose(product.id)}>X</button>
         <img src={product.image} alt="" />
         <h1>{product.title}</h1>
         <div className="product_price">
@@ -30,9 +30,24 @@ const Cart = () => {
     );
   };
 
+  const total = (product) => {
+    return (
+      <>
+        {state.length !== 0 && (
+          <div className="total">
+            <div>Sub Total: </div>
+            <div>Grand Total :</div>
+          </div>
+        )}
+      </>
+    );
+  };
+
   return (
     <div className=" cart">
       {state.length !== 0 && state.map(product)}
+      {state.length !== 0 && state.map(total)}
+
       {state.length === 0 && (
         <div className="empty_image">
           <img

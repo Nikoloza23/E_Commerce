@@ -5,13 +5,12 @@ import { useDispatch } from "react-redux";
 import { addCart } from "../../redux/action/index";
 
 import { Star } from "@mui/icons-material";
+import Footer from "../../components/footer/Footer";
+import Loader from "../../components/loader/Loader";
 
 import Modal from "react-modal";
 
 import "./details.scss";
-import Footer from "../../components/footer/Footer";
-import Loader from "../../components/loader/Loader";
-
 const customStyles = {
   content: {
     top: "50%",
@@ -35,7 +34,7 @@ function Details(type) {
   const dispatch = useDispatch();
 
   const addProduct = (product) => {
-    dispatch(addCart({basic:product, qty:quantity}));
+    dispatch(addCart({ basic: product, qty: quantity }));
   };
 
   const handleDecrement = () => {
@@ -127,7 +126,9 @@ function Details(type) {
               Add to Cart
             </button>
 
-            <NavLink to="/cart">Go to Cart</NavLink>
+            <NavLink to="/cart">
+              Go to Cart
+            </NavLink>
           </div>
         </div>
         <Footer type="list" />;

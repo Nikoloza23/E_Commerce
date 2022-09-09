@@ -1,0 +1,33 @@
+@use "../../sass/index.scss" as *;
+
+.login {
+  width: $max-content;
+  min-height: 100vh;
+  @include flex(center, center);
+  flex-direction: column;
+  .login_inputs {
+    @include flex(center, "");
+    flex-direction: column;
+    text-align: center;
+
+    input {
+      padding: 10px;
+      width: 300px;
+      border: 1px solid #cecece;
+      margin: 20px 0;
+      cursor: pointer;
+    }
+    small {
+      color: red;
+    }
+    .login_button {
+      padding: 10px;
+      width: 300px;
+      border: 1px solid #cecece;
+      margin: 20px 0;
+      background-color: black;
+      color: $white;
+      cursor: pointer;
+    }
+  }
+}

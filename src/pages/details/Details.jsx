@@ -126,7 +126,7 @@ function Details(type) {
               Add to Cart
             </button>
 
-            <NavLink to="/cart">
+            <NavLink to="/cart" style={{textDecoration:"none"}}>
               Go to Cart
             </NavLink>
           </div>

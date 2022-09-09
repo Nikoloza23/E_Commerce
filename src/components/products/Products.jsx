@@ -6,7 +6,7 @@ import Loader from "../loader/Loader";
 import "./products.scss";
 
 //Products With Filter
-const ProductsList = () => {
+const Products = () => {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState(data);
   const [loading, setLoading] = useState(false);
@@ -74,7 +74,10 @@ const ProductsList = () => {
         {filter.map((product) => {
           return (
             <div className="products_list_container" key={product.id}>
-              <NavLink to={`/products/${product.id}`}>
+              <NavLink
+                to={`/products/${product.id}`}
+                style={{ textDecoration: "none" }}
+              >
                 <div key={product.id} className="card">
                   <div>
                     <img src={product.image} alt={product.title} />
@@ -99,4 +102,4 @@ const ProductsList = () => {
   );
 };
 
-export default ProductsList;
+export default Products;

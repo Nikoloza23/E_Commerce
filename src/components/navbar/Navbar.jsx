@@ -10,7 +10,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import "./navbar.scss";
 
 //Navbar
-const Navbar = () => {
+const Navbar = ({}) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const state = useSelector((state) => state.handleCart);
@@ -34,14 +34,16 @@ const Navbar = () => {
       </Link>
       <div className="icons">
         <div>
-          <div className="length">{state.length ? state.length : ""}</div>
           <Link to="/cart" style={{ color: "black" }}>
+            <div className="length">{state.length ? state.length : ""}</div>
             <ShoppingCartIcon />
           </Link>
         </div>
-        <div>
-          <PersonIcon />
-        </div>
+        <Link to="/register" style={{ color: "black" }}>
+          <div>
+            <PersonIcon />
+          </div>
+        </Link>
       </div>
     </header>
   );

@@ -30,7 +30,7 @@ const Cart = () => {
     );
   };
 
-  const total = (product) => {
+  /* const total = (product) => {
     return (
       <>
         {state.length !== 0 && (
@@ -41,12 +41,12 @@ const Cart = () => {
         )}
       </>
     );
-  };
+  }; */
 
   return (
     <div className=" cart">
       {state.length !== 0 && state.map(product)}
-      {state.length !== 0 && state.map(total)}
+      {/* {state.length !== 0 && state.map(total)} */}
 
       {state.length === 0 && (
         <div className="empty_image">

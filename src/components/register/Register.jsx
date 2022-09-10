@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
 
 import { toast, ToastContainer } from "react-toastify";
@@ -33,6 +34,7 @@ function Register({ type }) {
       console.log("Saved in Local Storage");
 
       setLogin(!login);
+      console.log(name, email, password, profession);
     }
   }
 
@@ -41,7 +43,11 @@ function Register({ type }) {
   }
 
   const toaster = () => {
-    <>{flag === flag ? toast.error("Please Required") : toast("Well Done")}</>;
+    if (flag) {
+      toast.error("Please Required");
+    } else {
+      toast.error("Please Required");
+    }
   };
 
   return (

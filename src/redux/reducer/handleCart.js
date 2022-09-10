@@ -1,4 +1,4 @@
-const cart = [];
+const cart = []
 
 const handleCart = (state = cart, action) => {
     const product = action.payload;
@@ -32,9 +32,11 @@ const handleCart = (state = cart, action) => {
                     x.id === id ? { ...x, qty: x.qty - 1 } : x
                 )
             }
+
+
         default:
             return state;
     }
 }
 
-export default handleCart
+export default handleCart;

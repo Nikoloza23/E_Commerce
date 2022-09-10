@@ -31,29 +31,26 @@
     width: 90%;
     height: 50vh;
     padding: 20px;
+    border: none;
 
     .card-description {
       @include flex(center, center);
       flex-direction: column;
       padding: 10px;
       overflow: hidden;
-      text-decoration: none;
 
       h6 {
         color: $dark;
         font-size: 15px;
         margin-bottom: 10px;
-        text-decoration: none;
       }
       .price {
         font-size: 20px;
-        text-decoration: none;
       }
       .buy {
         border-radius: 10px;
         cursor: $curs;
         color: gray;
-        text-decoration: none;
 
         &:hover {
           transform: $transform;

@@ -16,11 +16,6 @@ const Footer = ({ type }) => {
         </p>
         <ul className="socials">
           <li>
-            <a href="/#">
-              <TwitterIcon />
-            </a>
-          </li>
-          <li>
             <a href="https://www.linkedin.com/in/nikoloz-abashia-536681222/">
               <LinkedInIcon />
             </a>

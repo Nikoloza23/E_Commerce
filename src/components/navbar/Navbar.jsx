@@ -10,7 +10,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import "./navbar.scss";
 
 //Navbar
-const Navbar = ({}) => {
+const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const state = useSelector((state) => state.handleCart);

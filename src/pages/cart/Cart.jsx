@@ -30,23 +30,31 @@ const Cart = () => {
     );
   };
 
-  /* const total = (product) => {
+  const total = (product) => {
+    const DUMMY_ARR = [
+      {
+        id: product.id,
+        price: product.price * product.qty,
+      },
+    ];
+
+    const tot = DUMMY_ARR.reduce((acc, inc) => inc.price + acc, 0);
     return (
-      <>
+      <div key={product.id}>
         {state.length !== 0 && (
           <div className="total">
-            <div>Sub Total: </div>
-            <div>Grand Total :</div>
+            <div>Sub Total:{tot} </div>
+            <div>Grand Total: </div>
           </div>
         )}
-      </>
+      </div>
     );
-  }; */
+  };
 
   return (
     <div className=" cart">
       {state.length !== 0 && state.map(product)}
-      {/* {state.length !== 0 && state.map(total)} */}
+      {state.length !== 0 && state.map(total)}
 
       {state.length === 0 && (
         <div className="empty_image">

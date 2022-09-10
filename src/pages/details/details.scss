@@ -85,13 +85,14 @@
           transform: scale(1.1);
         }
       }
-      a {
+      .buy_now {
         position: $abs;
         background: none;
         color: $dark;
         font-weight: $font;
-        margin: 30px 20px 10px;
+        margin: 30px 30px 10px;
         font-size: 1rem;
+        background: none;
         cursor: $curs;
         &:hover {
           transform: scale(1.1);

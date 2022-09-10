@@ -1,16 +1,19 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
-import { NavLink } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addCart } from "../../redux/action/index";
 
 import { Star } from "@mui/icons-material";
+import { toast, ToastContainer } from "react-toastify";
+
 import Footer from "../../components/footer/Footer";
 import Loader from "../../components/loader/Loader";
 
 import Modal from "react-modal";
 
+import "react-toastify/dist/ReactToastify.css";
 import "./details.scss";
+
 const customStyles = {
   content: {
     top: "50%",
@@ -32,9 +35,11 @@ function Details(type) {
   const [quantity, setQuantity] = useState(1);
 
   const dispatch = useDispatch();
+  const order = () => toast.success("Successfully paid", {position: toast.POSITION.TOP_CENTER});
 
   const addProduct = (product) => {
     dispatch(addCart({ basic: product, qty: quantity }));
+    console.log(product, quantity);
   };
 
   const handleDecrement = () => {
@@ -126,9 +131,10 @@ function Details(type) {
               Add to Cart
             </button>
 
-            <NavLink to="/cart" style={{textDecoration:"none"}}>
-              Go to Cart
-            </NavLink>
+            <button className="buy_now" onClick={order}>
+              Buy Now
+            </button>
+            <ToastContainer />
           </div>
         </div>
         <Footer type="list" />;

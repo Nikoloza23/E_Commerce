@@ -82,3 +82,11 @@ footer {
   padding-top: 20px;
   color: $white;
 }
+
+
+@media screen {
+  footer{
+    position: fixed;
+    z-index: -1;
+  }
+}

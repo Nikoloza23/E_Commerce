@@ -75,3 +75,21 @@
     }
   }
 }
+
+@media (max-width: 1000px) {
+  .set_products {
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+    background: white;
+  }
+  .filters {
+    position: $abs;
+    left: 0;
+    right: 0;
+    background: white;
+    .filter {
+      font-size: 1rem !important;
+    }
+  }
+}

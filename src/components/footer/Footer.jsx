@@ -1,4 +1,3 @@
-import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import "./footer.scss";
 

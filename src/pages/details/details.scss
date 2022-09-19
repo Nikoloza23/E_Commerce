@@ -115,13 +115,22 @@
   overflow: hidden;
 }
 
-@media (max-width: 1000px) {
-  .details_left {
-    display: flex;
-    flex-direction: column;
-  }
-  .details_right {
-    display: flex;
-    flex-direction: column;
+@media (max-width: 800px) {
+  .details {
+    &_Wrapper {
+      @include flex(center, center);
+      flex-direction: column;
+    }
+    .details_left {
+      img {
+        width: 300px;
+        height: 300px;
+        cursor: $curs;
+      }
+    }
+    .details_right{
+      margin-top: 20px;
+      font-size: 20px;
+    }
   }
 }

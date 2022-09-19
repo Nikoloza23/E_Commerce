@@ -84,9 +84,18 @@ footer {
 }
 
 
-@media screen {
+
+@media (max-width: 1300px){
   footer{
     position: fixed;
     z-index: -1;
+  }
+}
+
+
+@media (max-width: 1300px){
+  .mini_footer{
+    position: fixed;
+    z-index: -3;
   }
 }

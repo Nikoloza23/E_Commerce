@@ -121,3 +121,14 @@
   font-weight: $font;
   overflow: hidden;
 }
+
+@media (max-width: 1000px) {
+  .details_left {
+   display: flex;
+    flex-direction: column;
+  }
+  .details_right{
+    display: flex;
+    flex-direction: column;
+  }
+}

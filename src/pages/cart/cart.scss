@@ -40,30 +40,7 @@
       font-weight: $font;
       left: 400px;
     }
-    .increment {
-      position: $abs;
-      margin-top: 230px;
-      cursor: $curs;
-      font-size: 1.5rem;
-      font-weight: $font;
-      left: 400px;
-      border-radius: 10px;
-      &:hover {
-        color: green;
-      }
-    }
-    .decrement {
-      position: $abs;
-      margin-top: 230px;
-      cursor: $curs;
-      font-size: 1.5rem;
-      font-weight: $font;
-      left: 450px;
-      border-radius: 10px;
-      &:hover {
-        color: red;
-      }
-    }
+
     .quantity {
       position: $abs;
       margin-top: -130px;
@@ -83,5 +60,27 @@
     margin: -100px;
     width: 600px;
     background-image: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .cart_container {
+    margin-left: -100px;
+    h1 {
+      margin-left: -200px;
+      font-size: 13px !important;
+    }
+    .product_price {
+      margin-left: -100px;
+      font-size: 25px !important;
+    }
+    .quantity {
+      margin-left: -100px;
+      font-size: 25px !important;
+    
+    }
+    hr{
+      width: 90% !important;
+    }
   }
 }

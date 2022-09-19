@@ -1,8 +1,6 @@
 @use "../../sass/index.scss" as *;
 
 footer {
-  position: $abs;
-  margin-top: 110%;
   background: #111;
   height: auto;
   width: $max-content;
@@ -73,29 +71,22 @@ footer {
 }
 
 .mini_footer {
-  position: $abs;
-  top: -120%;
   background: #111;
   height: auto;
   width: $max-content;
   font-family: "Open Sans";
-  padding-top: 20px;
+  margin-top: 3rem;
   color: $white;
 }
 
-
-
-@media (max-width: 1300px){
-  footer{
-    position: fixed;
-    z-index: -1;
+@media (max-width: 1300px) {
+  footer {
+    display: none;
   }
 }
 
-
-@media (max-width: 1300px){
-  .mini_footer{
-    position: fixed;
-    z-index: -3;
+@media (max-width: 1300px) {
+  .mini_footer {
+    display: none;
   }
 }

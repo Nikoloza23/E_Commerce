@@ -51,6 +51,19 @@
       border-radius: 10px;
     }
   }
+  .total {
+    border: 1px solid #ccc;
+    width: max-content;
+    font-size: 1.5rem;
+    font-weight: $font;
+    @include flex(center, center);
+    flex-direction: column;
+
+    button {
+      background: none;
+      color: green;
+    }
+  }
 }
 
 .empty_image {
@@ -77,9 +90,8 @@
     .quantity {
       margin-left: -100px;
       font-size: 25px !important;
-    
     }
-    hr{
+    hr {
       width: 90% !important;
     }
   }

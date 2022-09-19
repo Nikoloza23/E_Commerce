@@ -1,6 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
 import { delCart } from "../../redux/action/index";
 
+import { toast, ToastContainer } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
+
 import "./cart.scss";
 
 //Cart
@@ -12,6 +16,17 @@ const Cart = () => {
   const handleClose = (id) => {
     dispatch(delCart(id));
     console.log(id);
+  };
+
+  var subTotal = 0;
+  var grandTotal = 0;
+  state.forEach((item) => {
+    subTotal = subTotal + item.price * item.qty;
+    grandTotal = grandTotal + item.qty;
+  });
+
+  const notify = () => {
+    toast.success("Successfully paid", { position: toast.POSITION.TOP_CENTER });
   };
 
   const product = (product) => {
@@ -30,31 +45,20 @@ const Cart = () => {
     );
   };
 
-  const total = (product) => {
-    const DUMMY_ARR = [
-      {
-        id: product.id,
-        price: product.price * product.qty,
-      },
-    ];
-
-    const tot = DUMMY_ARR.reduce((acc, inc) => inc.price + acc, 0);
-    return (
-      <div key={product.id}>
-        {state.length !== 0 && (
-          <div className="total">
-            <div>Sub Total:{tot} </div>
-            <div>Grand Total: </div>
-          </div>
-        )}
-      </div>
-    );
-  };
-
   return (
     <div className=" cart">
       {state.length !== 0 && state.map(product)}
-      {state.length !== 0 && state.map(total)}
+      <div>
+        {state.length !== 0 && (
+          <div className="total">
+            <div className="sub">Sub Total: {Math.floor(subTotal)}$</div>
+            <div className="grand">Grand Total: {grandTotal} </div>
+            <button onClick={notify}>
+              Check Order $<ToastContainer />
+            </button>
+          </div>
+        )}
+      </div>
 
       {state.length === 0 && (
         <div className="empty_image">

@@ -35,7 +35,8 @@ function Details(type) {
   const [quantity, setQuantity] = useState(1);
 
   const dispatch = useDispatch();
-  const order = () => toast.success("Successfully paid", {position: toast.POSITION.TOP_CENTER});
+  const order = () =>
+    toast.success("Successfully paid", { position: toast.POSITION.TOP_CENTER });
 
   const addProduct = (product) => {
     dispatch(addCart({ basic: product, qty: quantity }));
@@ -82,63 +83,65 @@ function Details(type) {
 
   const SelectedProduct = () => {
     return (
-      <div>
-        <div className="details_left">
-          <img onClick={openModal} src={product.image} alt="" />
-          <Modal
-            isOpen={modalIsOpen}
-            onRequestClose={closeModal}
-            style={customStyles}
-            contentLabel="Example Modal"
-          >
-            <button className="modal_close" onClick={closeModal}>
-              close
-            </button>
-            <img src={product.image} alt="" className="modal_image" />
-          </Modal>
-        </div>
-        <div className="details_right">
-          <h4>{product.category}</h4>
-          <h1>{product.title}</h1>
-          <p>
-            Rating {product.rating && product.rating.rate}
-            <Star className="star" />
-          </p>
-          <h3>Total Price: {product.price * quantity}$</h3>
-          <h2 style={{ color: "gray" }}>Total Product: {quantity}</h2>
-          <div className="quantity">
-            <button
-              className="increment"
-              onClick={() => handleIncrement(product.id)}
+      <>
+        <div className="details_Wrapper">
+          <div className="details_left">
+            <img onClick={openModal} src={product.image} alt="" />
+            <Modal
+              isOpen={modalIsOpen}
+              onRequestClose={closeModal}
+              style={customStyles}
+              contentLabel="Example Modal"
             >
-              +
-            </button>
-            <button
-              onClick={() => handleDecrement(product.id)}
-              className="decrement"
-            >
-              -
-            </button>
+              <button className="modal_close" onClick={closeModal}>
+                close
+              </button>
+              <img src={product.image} alt="" className="modal_image" />
+            </Modal>
           </div>
-          <p className="descriprion">
-            {product.description?.substring(0, 100)}
-          </p>
-          <div className="sides">
-            <button
-              onClick={() => addProduct(product, quantity)}
-              className="add_cart"
-            >
-              Add to Cart
-            </button>
+          <div className="details_right">
+            <h4>{product.category}</h4>
+            <h1>{product.title}</h1>
+            <p>
+              Rating {product.rating && product.rating.rate}
+              <Star className="star" />
+            </p>
+            <h3>Total Price: {product.price * quantity}$</h3>
+            <h2 style={{ color: "gray" }}>Total Product: {quantity}</h2>
+            <div className="quantity">
+              <button
+                className="increment"
+                onClick={() => handleIncrement(product.id)}
+              >
+                +
+              </button>
+              <button
+                onClick={() => handleDecrement(product.id)}
+                className="decrement"
+              >
+                -
+              </button>
+            </div>
+            <p className="descriprion">
+              {product.description?.substring(0, 100)}
+            </p>
+            <div className="sides">
+              <button
+                onClick={() => addProduct(product, quantity)}
+                className="add_cart"
+              >
+                Add to Cart
+              </button>
 
-            <button className="buy_now" onClick={order}>
-              Buy Now
-            </button>
-            <ToastContainer />
+              <button className="buy_now" onClick={order}>
+                Buy Now
+              </button>
+              <ToastContainer />
+            </div>
           </div>
         </div>
-        <Footer type="list" />;
-      </div>
+        <Footer type="list" />
+      </>
     );
   };
 

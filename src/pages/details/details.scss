@@ -1,28 +1,23 @@
 @use "../../sass/index.scss" as *;
 
 .details {
-  margin-top: 120px;
+  padding-top: 7rem;
+  &_Wrapper {
+    @include flex(center, center);
+  }
   .details_left {
-    height: $max-content;
-    width: 50%;
-    position: $abs;
-    top: 0;
-    overflow-x: hidden;
-    padding-top: 20px;
+    flex: 1;
+    @include flex(center, center);
+
     img {
       width: 400px;
       height: 400px;
-      margin-top: 170px;
-
-      margin-left: 200px;
       cursor: $curs;
     }
   }
 
   .details_right {
-    width: 600px;
-    position: $abs;
-    right: 50px;
+    flex: 1;
     .quantity {
       .increment {
         background: none;
@@ -34,19 +29,17 @@
         }
       }
       .decrement {
+        margin-left: 1rem;
         background: none;
         font-size: 2rem;
         cursor: pointer;
-        position: $abs;
-        left: 50px;
         font-weight: $font;
         &:hover {
           color: red;
         }
       }
     }
-    @include flex("", "");
-    flex-direction: column;
+
     h4 {
       font-size: 2rem;
       text-transform: uppercase;
@@ -124,10 +117,10 @@
 
 @media (max-width: 1000px) {
   .details_left {
-   display: flex;
+    display: flex;
     flex-direction: column;
   }
-  .details_right{
+  .details_right {
     display: flex;
     flex-direction: column;
   }

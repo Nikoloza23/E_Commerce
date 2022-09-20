@@ -6,6 +6,8 @@ import { Alert } from "react-bootstrap";
 
 import Home from "../../pages/Home";
 
+import './login.scss'
+
 import "bootstrap/dist/css/bootstrap.min.css";
 
 //Login Page
@@ -32,7 +34,7 @@ function Login() {
   }
 
   return (
-    <div>
+    <div className="login_container">
       {home ? (
         <form onSubmit={handleLogin}>
           <h3>LogIn</h3>

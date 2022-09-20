@@ -51,7 +51,7 @@ function Register({ type }) {
 
   return (
     <>
-      <div>
+      <div className="register_container">
         {login ? (
           <form onSubmit={handleFormSubmit}>
             <h3>Register</h3>

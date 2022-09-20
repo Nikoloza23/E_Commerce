@@ -44,7 +44,7 @@ function Details(type) {
   };
 
   const handleDecrement = () => {
-    if (quantity >= 1) {
+    if (quantity !== 1) {
       setQuantity((prevCount) => prevCount - 1);
     }
   };

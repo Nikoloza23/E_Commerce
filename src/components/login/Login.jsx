@@ -6,7 +6,7 @@ import { Alert } from "react-bootstrap";
 
 import Home from "../../pages/Home";
 
-import './login.scss'
+import "./login.scss";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 

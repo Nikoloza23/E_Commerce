@@ -35,8 +35,12 @@ function Details(type) {
   const [quantity, setQuantity] = useState(1);
 
   const dispatch = useDispatch();
-  const order = () =>
-    toast.success("Successfully paid", { position: toast.POSITION.TOP_CENTER });
+
+  const order = () => {
+    if (order === 1) {
+      toast.success("Successfully Paid", { position: toast.POSITION.TOP_CENTER });
+    }
+  }
 
   const addProduct = (product) => {
     dispatch(addCart({ basic: product, qty: quantity }));
@@ -106,7 +110,7 @@ function Details(type) {
               Rating {product.rating && product.rating.rate}
               <Star className="star" />
             </p>
-            <h3>Total Price: {product.price * quantity}$</h3>
+            <h3>Total Price: {(product.price * quantity).toFixed(2)}$</h3>
             <h2 style={{ color: "gray" }}>Total Product: {quantity}</h2>
             <div className="quantity">
               <button

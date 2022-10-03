@@ -6,7 +6,6 @@ import { Alert } from "react-bootstrap";
 
 import Home from "../../pages/Home";
 
-import "./login.scss";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -34,9 +33,9 @@ function Login() {
   }
 
   return (
-    <div className="login_container">
+    <>
       {home ? (
-        <form onSubmit={handleLogin}>
+        <form onSubmit={handleLogin} style={{ boxShadow: "-3px 2px 31px -7px rgba(0, 0, 0, 0.75)", padding: "20px", marginTop: "8rem", marginLeft: "35rem", width: "max-content" }}>
           <h3>LogIn</h3>
           <div className="form-group">
             <label>Email</label>
@@ -58,7 +57,8 @@ function Login() {
             />
           </div>
 
-          <button type="submit" className="btn btn-dark btn-lg btn-block">
+          <button type="submit" className="btn btn-dark btn-lg btn-block" style={{ marginTop: "10px" }}
+          >
             Login
           </button>
           <NavLink to="/register" style={{ textDecoration: "none" }}>
@@ -74,7 +74,7 @@ function Login() {
       ) : (
         <Home />
       )}
-    </div>
+    </>
   );
 }
 

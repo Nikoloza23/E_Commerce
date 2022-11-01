@@ -33,17 +33,15 @@ const Navbar = () => {
         </nav>
       </Link>
       <div className="icons">
-        <div>
-          <Link to="/cart" style={{ color: "black" }}>
-            <div className="length">{state.length ? state.length : ""}</div>
-            <ShoppingCartIcon />
+        <Link to="/cart" style={{ color: "black" }}>
+          <div className="length">{state.length ? state.length : ""}</div>
+          <ShoppingCartIcon />
+        </Link>
+        <div className="icons_wrapper">
+          <Link to="/register" style={{ color: "black" }}>
+            <PersonIcon />
           </Link>
         </div>
-        <Link to="/register" style={{ color: "black" }}>
-          <div>
-            <PersonIcon />
-          </div>
-        </Link>
       </div>
     </header>
   );

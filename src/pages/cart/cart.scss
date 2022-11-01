@@ -3,18 +3,26 @@
 .cart {
   margin-top: 130px;
   margin-left: 150px;
+
   .cart_container {
     margin-bottom: 30px;
+
+    .quanter {
+      display: flex;
+    }
+
     hr {
       border: 1px solid black;
       width: 95%;
     }
+
     button {
       font-size: 20px;
       background: none;
       cursor: $curs;
       position: $abs;
       margin-top: 10px;
+
       &:hover {
         transform: scale(1.1);
       }
@@ -27,12 +35,14 @@
       font-weight: $font;
       left: 400px;
     }
+
     img {
       width: 200px;
       height: 200px;
       margin: 40px 10px 50px;
       cursor: $curs;
     }
+
     .product_price {
       position: $abs;
       margin-top: -200px;
@@ -51,6 +61,7 @@
       border-radius: 10px;
     }
   }
+
   .total {
     border: 1px solid #ccc;
     width: max-content;
@@ -79,18 +90,22 @@
 @media (max-width: 1000px) {
   .cart_container {
     margin-left: -100px;
+
     h1 {
       margin-left: -200px;
       font-size: 13px !important;
     }
+
     .product_price {
       margin-left: -100px;
       font-size: 25px !important;
     }
+
     .quantity {
       margin-left: -100px;
       font-size: 25px !important;
     }
+
     hr {
       width: 90% !important;
     }

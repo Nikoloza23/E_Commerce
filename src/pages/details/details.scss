@@ -2,9 +2,11 @@
 
 .details {
   padding-top: 7rem;
+
   &_Wrapper {
     @include flex(center, center);
   }
+
   .details_left {
     flex: 1;
     @include flex(center, center);
@@ -18,22 +20,26 @@
 
   .details_right {
     flex: 1;
+
     .quantity {
       .increment {
         background: none;
         cursor: pointer;
         font-size: 2rem;
         font-weight: $font;
+
         &:hover {
           color: green;
         }
       }
+
       .decrement {
         margin-left: 1rem;
         background: none;
         font-size: 2rem;
         cursor: pointer;
         font-weight: $font;
+
         &:hover {
           color: red;
         }
@@ -46,25 +52,30 @@
       color: rgba(0, 0, 0, 0.5);
       --bs-text-opacity: 1;
     }
+
     h1 {
       font-size: 2.5rem;
       font-weight: $font;
     }
+
     p {
       font-size: 1.25rem;
       font-weight: $font;
     }
+
     .star {
       color: yellow;
       font-size: 1.5rem;
       margin-left: 5px;
     }
+
     h3 {
       font-weight: 700;
       font-size: 2.5rem;
       margin-top: 1.5rem;
       margin-bottom: 1.5rem;
     }
+
     .sides {
       .add_cart {
         background: none;
@@ -78,6 +89,7 @@
           transform: scale(1.1);
         }
       }
+
       .buy_now {
         position: $abs;
         background: none;
@@ -87,6 +99,7 @@
         font-size: 1rem;
         background: none;
         cursor: $curs;
+
         &:hover {
           transform: scale(1.1);
           color: green;
@@ -102,6 +115,7 @@
   cursor: $curs;
   margin-top: 30px;
   pointer-events: none;
+
   &:hover {
     transform: scale(1.1);
   }
@@ -121,13 +135,17 @@
       @include flex(center, center);
       flex-direction: column;
     }
+
     .details_left {
       img {
         width: 300px;
         height: 300px;
         cursor: $curs;
+        aspect-ratio: auto;
+
       }
     }
+
     .details_right {
       margin-top: 20px;
       font-size: 20px;

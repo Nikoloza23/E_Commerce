@@ -18,10 +18,12 @@
     height: 150px;
     background: none;
     cursor: $curs;
+
     &:hover {
       transform: $transform;
     }
   }
+
   .card {
     @include flex(center, center);
     flex-direction: column;
@@ -43,9 +45,11 @@
         font-size: 15px;
         margin-bottom: 10px;
       }
+
       .price {
         font-size: 20px;
       }
+
       .buy {
         border-radius: 10px;
         cursor: $curs;
@@ -58,15 +62,18 @@
       }
     }
   }
+
   .filters {
     position: $abs;
     @include flex(center, center);
     margin-top: -60px;
+
     .filter {
       margin: 20px;
       background: none;
       font-size: 20px;
       cursor: $curs;
+
       &:hover {
         color: gray;
         transform: $transform;
@@ -81,12 +88,19 @@
     flex-direction: column;
     margin-top: 150px;
     background: white;
+
+    img {
+      aspect-ratio: auto;
+    }
   }
+
   .filters {
     position: $abs;
     left: 0;
     right: 0;
     background: white;
+    overflow-x: auto;
+
     .filter {
       font-size: 1rem !important;
     }

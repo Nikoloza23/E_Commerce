@@ -36,11 +36,8 @@ function Details(type) {
 
   const dispatch = useDispatch();
 
-  const order = () => {
-    if (order === 1) {
-      toast.success("Successfully Paid", { position: toast.POSITION.TOP_CENTER });
-    }
-  }
+  const order = () =>
+    toast.success("Successfully Paid", { position: toast.POSITION.TOP_CENTER });
 
   const addProduct = (product) => {
     dispatch(addCart({ basic: product, qty: quantity }));

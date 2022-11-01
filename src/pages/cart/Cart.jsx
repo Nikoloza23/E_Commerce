@@ -38,8 +38,11 @@ const Cart = () => {
         <div className="product_price">
           Total Price : {product.price * product.qty}$
         </div>
-
         <div className="quantity">Product: {product.qty}</div>
+        <div className="quanter">
+          <button>+</button>
+          <button>-</button>
+        </div>
         <hr />
       </div>
     );
@@ -53,8 +56,9 @@ const Cart = () => {
           <div className="total">
             <div className="sub">Sub Total: {Math.floor(subTotal)}$</div>
             <div className="grand">Grand Total: {grandTotal} </div>
+
             <button onClick={notify}>
-              Check Order $<ToastContainer />
+              Check Order <ToastContainer />
             </button>
           </div>
         )}

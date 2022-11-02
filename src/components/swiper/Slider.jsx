@@ -2,6 +2,7 @@ import image1 from "../../assets/Own-It_Launch-Primary.webp";
 import image2 from "../../assets/Womens_Sneakers.webp";
 import image3 from "../../assets/AMBUSH_x_Nike_Air_Adjust.webp";
 import image4 from "../../assets/YVM-AH-Hero_Primary.webp";
+import image5 from "../../assets/The_Holidays.webp";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, {
@@ -55,6 +56,9 @@ const Slider = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img src={image4} alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={image5} alt="" />
         </SwiperSlide>
       </Swiper>
     </div>

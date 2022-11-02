@@ -55,7 +55,7 @@ const Cart = () => {
         {state.length !== 0 && (
           <div className="total">
             <div className="sub">Sub Total: {Math.floor(subTotal)}$</div>
-            <div className="grand">Grand Total: {grandTotal} </div>
+            <div className="grand">Product: {grandTotal} </div>
 
             <button onClick={notify}>
               Check Order <ToastContainer />

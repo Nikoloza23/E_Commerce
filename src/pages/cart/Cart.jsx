@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { delCart } from "../../redux/action/index";
 
@@ -9,14 +10,21 @@ import "./cart.scss";
 
 //Cart
 const Cart = () => {
+  const [quantity, setQuantity] = useState(1);
   const state = useSelector((state) => state.handleCart);
 
   const dispatch = useDispatch();
 
   const handleClose = (id) => {
     dispatch(delCart(id));
-    console.log(id);
   };
+
+  const handleDecrement = () => {
+    if (quantity !== 1) {
+      setQuantity((prevCount) => prevCount - 1);
+    }
+  };
+  console.log(handleDecrement());
 
   var subTotal = 0;
   var grandTotal = 0;
@@ -31,17 +39,28 @@ const Cart = () => {
 
   const product = (product) => {
     return (
-      <div className="cart_container" key={product.id}>
-        <button onClick={() => handleClose(product.id)}>X</button>
-        <img src={product.image} alt="" />
-        <h1>{product.title}</h1>
-        <div className="product_price">
-          Total Price : {product.price * product.qty}$
-        </div>
-        <div className="quantity">Product: {product.qty}</div>
-        <div className="quanter">
-          <button>+</button>
-          <button>-</button>
+      <div key={product.id}>
+        <div className="cart_container">
+          <button onClick={() => handleClose(product.id)} className="deleter">
+            X
+          </button>
+          <img src={product.image} alt="" />
+          <div className="cart_description_container">
+            <h1>{product.title}</h1>
+            <div className="product_price">
+              Total Price : {product.price * product.qty}$
+            </div>
+            <div className="quantity">Product: {product.qty}</div>
+            <div className="quanter">
+              <button className="cart_increment">+</button>
+              <button
+                className="cart_decrement"
+                onClick={() => handleDecrement(product.id)}
+              >
+                -
+              </button>
+            </div>
+          </div>
         </div>
         <hr />
       </div>

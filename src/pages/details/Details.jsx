@@ -41,7 +41,6 @@ function Details(type) {
 
   const addProduct = (product) => {
     dispatch(addCart({ basic: product, qty: quantity }));
-    console.log(product, quantity);
   };
 
   const handleDecrement = () => {
@@ -133,10 +132,11 @@ function Details(type) {
               >
                 Add to Cart
               </button>
-
-              <button className="buy_now" onClick={order}>
-                Buy Now
-              </button>
+              <div className="sides_wrapper">
+                <button className="buy_now" onClick={order}>
+                  Buy Now
+                </button>
+              </div>
               <ToastContainer />
             </div>
           </div>

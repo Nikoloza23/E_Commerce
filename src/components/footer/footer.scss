@@ -15,9 +15,13 @@ footer {
 
     h3 {
       font-size: 1.8rem;
-      font-weight: 400;
       text-transform: capitalize;
       line-height: 3rem;
+      color: rgba(225, 225, 225, 0.1);
+      background-image: url("https://media.istockphoto.com/vectors/colorful-abstract-geometric-background-vector-id689899998?k=20&m=689899998&s=612x612&w=0&h=MLmg5w8lsZ7S4zErmZAAKMudXt07D6S0XqlG74H0FBo=");
+      background-repeat: repeat-x;
+      -webkit-background-clip: text;
+      animation: animate 15s linear infinite;
     }
     p {
       max-width: 500px;
@@ -64,8 +68,11 @@ footer {
     }
     span {
       text-transform: uppercase;
-      opacity: 0.4;
-      font-weight: 200;
+      color: rgba(225, 225, 225, 0.1);
+      background-image: url("https://media.istockphoto.com/vectors/colorful-abstract-geometric-background-vector-id689899998?k=20&m=689899998&s=612x612&w=0&h=MLmg5w8lsZ7S4zErmZAAKMudXt07D6S0XqlG74H0FBo=");
+      background-repeat: repeat-x;
+      -webkit-background-clip: text;
+      animation: animate 15s linear infinite;
     }
   }
 }
@@ -77,6 +84,15 @@ footer {
   font-family: "Open Sans";
   margin-top: 3.5rem;
   color: $white;
+}
+
+@keyframes animate {
+  0% {
+    background-position: left 8px top 10px;
+  }
+  40% {
+    background-position: left 800px top 10px;
+  }
 }
 
 @media (max-width: 1300px) {

@@ -7,18 +7,15 @@
   grid-template-columns: repeat(5, 1fr);
   justify-items: center;
   padding: 10px;
-
   .loader {
     position: $abs;
     @include flex(center, center);
   }
-
   img {
     width: $max-content;
     height: 150px;
     background: none;
     cursor: $curs;
-
     &:hover {
       transform: $transform;
     }
@@ -28,33 +25,27 @@
     @include flex(center, center);
     flex-direction: column;
     margin: 20px 20px;
-
     width: 90%;
     height: 50vh;
     padding: 20px;
     border: none;
-
     .card-description {
       @include flex(center, center);
       flex-direction: column;
       padding: 10px;
       overflow: hidden;
-
       h6 {
         color: $dark;
         font-size: 15px;
         margin-bottom: 10px;
       }
-
       .price {
         font-size: 20px;
       }
-
       .buy {
         border-radius: 10px;
         cursor: $curs;
         color: gray;
-
         &:hover {
           transform: $transform;
           color: green;
@@ -67,13 +58,11 @@
     position: $abs;
     @include flex(center, center);
     margin-top: -60px;
-
     .filter {
       margin: 20px;
       background: none;
       font-size: 20px;
       cursor: $curs;
-
       &:hover {
         color: gray;
         transform: $transform;
@@ -88,12 +77,10 @@
     flex-direction: column;
     margin-top: 150px;
     background: white;
-
     img {
       aspect-ratio: auto;
     }
   }
-
   .filters {
     position: $abs;
     left: 0;

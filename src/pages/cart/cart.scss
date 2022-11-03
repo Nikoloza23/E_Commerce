@@ -3,37 +3,18 @@
 .cart {
   margin-top: 130px;
   margin-left: 150px;
-
   .cart_container {
     margin-bottom: 30px;
-
-    .quanter {
-      display: flex;
-    }
-
+    display: flex;
     hr {
       border: 1px solid black;
       width: 95%;
     }
-
-    button {
+    .deleter {
       font-size: 20px;
       background: none;
       cursor: $curs;
       position: $abs;
-      margin-top: 10px;
-
-      &:hover {
-        transform: scale(1.1);
-      }
-    }
-
-    h1 {
-      position: $abs;
-      margin-top: -280px;
-      font-size: 1.5rem;
-      font-weight: $font;
-      left: 400px;
     }
 
     img {
@@ -42,23 +23,41 @@
       margin: 40px 10px 50px;
       cursor: $curs;
     }
+    .cart_description_container {
+      margin-top: 10px;
+      padding: 20px;
 
-    .product_price {
-      position: $abs;
-      margin-top: -200px;
-      font-size: 1.5rem;
-      font-weight: $font;
-      left: 400px;
-    }
-
-    .quantity {
-      position: $abs;
-      margin-top: -130px;
-      cursor: $curs;
-      font-size: 1.5rem;
-      font-weight: $font;
-      left: 400px;
-      border-radius: 10px;
+      .product_price {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 1.5rem;
+        font-weight: $font;
+      }
+      h1 {
+        font-weight: $font;
+      }
+      .quantity {
+        font-size: 1.4rem;
+        font-weight: $font;
+        padding-bottom: 20px;
+      }
+      .quanter {
+        font-size: 1.4rem;
+        font-weight: $font;
+        .cart_decrement {
+          background: none;
+          margin-left: 10px;
+          &:hover {
+            color: red;
+          }
+        }
+        .cart_increment {
+          background: none;
+          &:hover {
+            color: green;
+          }
+        }
+      }
     }
   }
 
@@ -77,10 +76,12 @@
 }
 
 .empty_image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
   img {
-    margin-top: -150px;
-
-    height: 100vh;
+    height: 78vh;
     width: 100%;
     background-image: none;
   }

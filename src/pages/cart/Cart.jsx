@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { delCart } from "../../redux/action/index";
 
@@ -10,7 +9,6 @@ import "./cart.scss";
 
 //Cart
 const Cart = () => {
-  const [quantity, setQuantity] = useState(1);
   const state = useSelector((state) => state.handleCart);
 
   const dispatch = useDispatch();
@@ -18,13 +16,6 @@ const Cart = () => {
   const handleClose = (id) => {
     dispatch(delCart(id));
   };
-
-  const handleDecrement = () => {
-    if (quantity !== 1) {
-      setQuantity((prevCount) => prevCount - 1);
-    }
-  };
-  console.log(handleDecrement());
 
   var subTotal = 0;
   var grandTotal = 0;
@@ -38,6 +29,9 @@ const Cart = () => {
   };
 
   const product = (product) => {
+    const handleIncrement = (product) => {
+      return <>{product.qty + 1}</>;
+    };
     return (
       <div key={product.id}>
         <div className="cart_container">
@@ -52,13 +46,13 @@ const Cart = () => {
             </div>
             <div className="quantity">Product: {product.qty}</div>
             <div className="quanter">
-              <button className="cart_increment">+</button>
               <button
-                className="cart_decrement"
-                onClick={() => handleDecrement(product.id)}
+                className="cart_increment"
+                onClick={() => handleIncrement(product.qty)}
               >
-                -
+                +
               </button>
+              <button className="cart_decrement">-</button>
             </div>
           </div>
         </div>

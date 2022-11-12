@@ -22,12 +22,10 @@ const handleCart = (state = cart, action) => {
     case "DELITEM":
       const id = action.payload;
       const exist1 = state.find((x) => x.id === id);
-      if (exist1.qty === exist1.qty) {
+      if (exist1.qty === 1) {
         return state.filter((x) => x.id !== exist1.id);
       } else {
-        return state.map((x) =>
-          x.id === id ? { ...x, qty: x.qty - x.qty } : x
-        );
+        return state.map((x) => (x.id === id ? { ...x, qty: x.qty - 1 } : x));
       }
 
     default:

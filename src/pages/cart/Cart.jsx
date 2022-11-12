@@ -7,7 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 import "./cart.scss";
 
-//Cart
+//Cart process
 const Cart = () => {
   const state = useSelector((state) => state.handleCart);
 
@@ -29,9 +29,6 @@ const Cart = () => {
   };
 
   const product = (product) => {
-    const handleIncrement = (product) => {
-      return <>{product.qty + 1}</>;
-    };
     return (
       <div key={product.id}>
         <div className="cart_container">
@@ -45,7 +42,7 @@ const Cart = () => {
               Total Price : {product.price * product.qty}$
             </div>
             <div className="quantity">Product: {product.qty}</div>
-            <div className="quanter">
+            {/*  <div className="quanter">
               <button
                 className="cart_increment"
                 onClick={() => handleIncrement(product.qty)}
@@ -53,7 +50,7 @@ const Cart = () => {
                 +
               </button>
               <button className="cart_decrement">-</button>
-            </div>
+            </div> */}
           </div>
         </div>
         <hr />

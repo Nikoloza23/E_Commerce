@@ -1,14 +1,27 @@
 import { useDispatch, useSelector } from "react-redux";
 import { delCart } from "../../redux/action/index";
-
-import { toast, ToastContainer } from "react-toastify";
+import { useState } from "react";
 
 import "react-toastify/dist/ReactToastify.css";
 
+import Modal from "react-modal";
+
 import "./cart.scss";
 
+const customStyles = {
+  content: {
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+  },
+};
+Modal.setAppElement("#root");
 //Cart process
 const Cart = () => {
+  const [modalIsOpen, setIsOpen] = useState(false);
   const state = useSelector((state) => state.handleCart);
 
   const dispatch = useDispatch();
@@ -24,9 +37,13 @@ const Cart = () => {
     grandTotal = grandTotal + item.qty;
   });
 
-  const notify = () => {
-    toast.success("Successfully paid", { position: toast.POSITION.TOP_CENTER });
-  };
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
 
   const product = (product) => {
     return (
@@ -42,15 +59,6 @@ const Cart = () => {
               Total Price : {product.price * product.qty}$
             </div>
             <div className="quantity">Product: {product.qty}</div>
-            {/*  <div className="quanter">
-              <button
-                className="cart_increment"
-                onClick={() => handleIncrement(product.qty)}
-              >
-                +
-              </button>
-              <button className="cart_decrement">-</button>
-            </div> */}
           </div>
         </div>
         <hr />
@@ -67,9 +75,15 @@ const Cart = () => {
             <div className="sub">Sub Total: {Math.floor(subTotal)}$</div>
             <div className="grand">Product: {grandTotal} </div>
 
-            <button onClick={notify}>
-              Check Order <ToastContainer />
-            </button>
+            <button onClick={openModal}>Check Order</button>
+            <Modal
+              isOpen={modalIsOpen}
+              onRequestClose={closeModal}
+              style={customStyles}
+              contentLabel="Example Modal"
+            >
+              <h1 className="pay_procces">Paid Successfully!</h1>
+            </Modal>
           </div>
         )}
       </div>

@@ -84,8 +84,8 @@ const Products = () => {
                   </div>
                   <div className="card-description">
                     <h6>{product.title.substring(0, 20)}</h6>
-                    <h6 className="price">{`Price: ${product.price}$`}</h6>
-                    <div className="buy">Buy Now</div>
+                    <div className="price">{`Price: ${product.price}$`}</div>
+                    <div className="add">Buy Now</div>
                   </div>
                 </div>
               </NavLink>

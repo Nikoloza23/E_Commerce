@@ -41,23 +41,6 @@
         font-weight: $font;
         padding-bottom: 20px;
       }
-      .quanter {
-        font-size: 1.4rem;
-        font-weight: $font;
-        .cart_decrement {
-          background: none;
-          margin-left: 10px;
-          &:hover {
-            color: red;
-          }
-        }
-        .cart_increment {
-          background: none;
-          &:hover {
-            color: green;
-          }
-        }
-      }
     }
   }
 
@@ -75,13 +58,18 @@
   }
 }
 
+.pay_procces{
+  color: green;
+  font-family: 'Times New Roman', Times, serif;
+}
+
 .empty_image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  align-self: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   img {
-    height: 78vh;
+    height: 100vh;
     width: 100%;
     background-image: none;
   }

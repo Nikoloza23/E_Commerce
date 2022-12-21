@@ -2,53 +2,59 @@
 
 .set_products {
   width: $max-content;
-  min-height: 80vh;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   padding: 10px;
+  margin-bottom: 30px;
   .loader {
     position: $abs;
     @include flex(center, center);
   }
+
   img {
     width: $max-content;
-    height: 150px;
-    background: none;
+    height: 180px;
+    margin: 10px;
+    background: #f5f5f5;
     cursor: $curs;
     &:hover {
       transform: $transform;
     }
   }
-
   .card {
-    @include flex(center, center);
-    flex-direction: column;
     margin: 20px 20px;
-    width: 90%;
-    height: 50vh;
-    padding: 20px;
-    border: none;
+    width: 300px;
+    height: 60vh;
+    padding: 30px;
+    border: 2px solid $white;
+    border-radius: 30px;
     .card-description {
       @include flex(center, center);
       flex-direction: column;
-      padding: 10px;
-      overflow: hidden;
+      padding: 15px;
       h6 {
         color: $dark;
         font-size: 15px;
-        margin-bottom: 10px;
       }
       .price {
-        font-size: 20px;
+        font-weight: $font;
+        font-size: 1.1rem;
+        margin: 20px;
+        color: $dark;
       }
-      .buy {
-        border-radius: 10px;
+      .add {
         cursor: $curs;
-        color: gray;
+        width: $max-content;
+        padding: 15px;
+        background: linear-gradient(130deg, #fdc527 0%, #fea01a $max-content);
+        color: $white;
+        font-weight: $font;
+        border: 0px;
+        border-radius: 20px;
+        @include flex(center, center);
         &:hover {
           transform: $transform;
-          color: green;
         }
       }
     }
@@ -64,7 +70,7 @@
       font-size: 20px;
       cursor: $curs;
       &:hover {
-        color: gray;
+        color: gold;
         transform: $transform;
       }
     }
@@ -76,7 +82,7 @@
     display: flex;
     flex-direction: column;
     margin-top: 150px;
-    background: white;
+    background: $white;
     img {
       aspect-ratio: auto;
     }
@@ -85,7 +91,7 @@
     position: $abs;
     left: 0;
     right: 0;
-    background: white;
+    background: $white;
     overflow-x: auto;
     .filter {
       font-size: 1rem !important;
